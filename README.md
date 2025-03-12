@@ -123,3 +123,50 @@ sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/math/tsconfig.js
 sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/math/src/add.ts`
 sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/math/src/subtract.ts`
 ```
+
+### Add the package to an application
+
+```json
+// apps/web/package.json
+  "dependencies": {
+    "@repo/ui": "*",
++   "@repo/math": "*",
+    "next": "^15.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+```
+
+```ts
+import { add } from "@repo/math/add"; // Add
+
+// ...
+
+export default function Home() {
+  return (
+    // ...
+        <div>{add(1, 2)}</div>
+    // ...
+  )
+}
+```
+
+### Edit `turbo.json`
+
+```json
+// ./turbo.json
+{
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    }
+  }
+}
+```
+
+### Run `turbo build`
+
+```sh
+npm run build
+```
