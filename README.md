@@ -239,6 +239,11 @@ https://turbo.build/repo/docs/guides/tools/eslint
 
 https://turbo.build/repo/docs/guides/tools/biome
 
+```sh
+npm install --save-dev --save-exact @biomejs/biome
+npx @biomejs/biome init --jsonc
+```
+
 ### TypeScript
 
 https://turbo.build/repo/docs/guides/tools/typescript
