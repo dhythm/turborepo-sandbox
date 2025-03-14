@@ -284,7 +284,13 @@ npm install @testing-library/react @testing-library/dom @types/react @types/reac
 
 ### MSW
 
-## Design
+## Others
+
+### Knip
+
+```sh
+npm init @knip/config
+```
 
 ### Storybook
 
