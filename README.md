@@ -199,7 +199,9 @@ turbo build --filter=web...
 turbo ls --filter ...@repo/ui
 ```
 
-## Create a vite app
+## Builder and bundler
+
+### Create a vite app
 
 ```sh
 cd apps
@@ -221,4 +223,12 @@ npm install
     "@repo/ui": "*",
     // ...
   }
+```
+
+## Testing libraries
+
+### jest
+
+```sh
+npm install jest ts-jest @types/jest --workspace=@repo/math --save-dev
 ```
