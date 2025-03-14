@@ -170,3 +170,55 @@ export default function Home() {
 ```sh
 npm run build
 ```
+
+## Run tasks
+
+### Run multiple tasks
+
+```sh
+npx turbo run lint build check-types
+```
+
+### Filter
+
+```sh
+# by package
+turbo build --filter=@acme/web
+
+# by directory
+turbo lint --filter="./packages/utilities/*"
+
+# include dependents
+turbo build --filter=...@repo/ui
+
+# include dependencies
+turbo build --filter=web...
+```
+
+```sh
+turbo ls --filter ...@repo/ui
+```
+
+## Create a vite app
+
+```sh
+cd apps
+npm create vite@latest vite-app
+
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  TypeScript
+
+cd -
+npm install
+```
+
+```json
+  // apps/vite-app/package.json
+  "devDependencies": {
+    "@repo/ui": "*",
+    // ...
+  }
+```
