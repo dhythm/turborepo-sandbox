@@ -241,6 +241,11 @@ npm install
 npm install jest ts-jest @types/jest --workspace=@repo/math --save-dev
 ```
 
+#### Issue
+
+It worked with jest.config.js but not worked with jest.config.ts.
+https://github.com/vercel/turborepo/issues/4126
+
 ### Vitest
 
 ```sh
@@ -248,6 +253,11 @@ npm install vitest vite-tsconfig-paths --workspace=@repo/hello --save-dev
 ```
 
 ### React Testing Library
+
+```sh
+npm install jest ts-jest @types/jest jest-environment-jsdom --workspace=@repo/ui --save-dev
+npm install @testing-library/react @testing-library/dom @types/react @types/react-dom --workspace=@repo/ui --save-dev
+```
 
 ### Playwright
 
