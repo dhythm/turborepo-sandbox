@@ -6,8 +6,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "format-and-lint": "biome check .",
-    "format-and-lint:fix": "biome check . --write",
+		"format-and-lint": "npx @biomejs/biome check .",
+		"format-and-lint:fix": "npx @biomejs/biome check --write .",
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
