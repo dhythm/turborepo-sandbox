@@ -288,6 +288,8 @@ npm install @testing-library/react @testing-library/dom @types/react @types/reac
 
 ### Knip
 
+https://knip.dev/features/monorepos-and-workspaces
+
 ```sh
 npm init @knip/config
 ```
