@@ -33,12 +33,12 @@ To get started:
 
 ### [Install dependencies](https://turbo.build/repo/docs/crafting-your-repository/managing-dependencies#best-practices-for-dependency-installation)
 
-
 ```sh
 npm install jest --workspace=web --workspace=@repo/ui --save-dev
 ```
 
 > #### Turborepo does not manage dependencies
+>
 > Note that Turborepo does not play a role in managing your dependencies, leaving that work up to your package manager of choice.
 >
 > It's up to the package manager to handle things like downloading the right external dependency version, symlinking, and resolving modules. The recommendations on this page are best practices for managing dependencies in a Workspace, and are not enforced by Turborepo.
@@ -201,7 +201,7 @@ turbo ls --filter ...@repo/ui
 
 ## Builder and bundler
 
-### Create a vite app
+### Vite
 
 ```sh
 cd apps
@@ -225,10 +225,30 @@ npm install
   }
 ```
 
-## Testing libraries
+### webpack
 
-### jest
+### rspack
+
+## Linter / Formatter / type-checker
+
+### Biome
+
+## Testing tools
+
+### Jest
 
 ```sh
 npm install jest ts-jest @types/jest --workspace=@repo/math --save-dev
 ```
+
+### Vitest
+
+```sh
+npm install vitest vite-tsconfig-paths --workspace=@repo/hello --save-dev
+```
+
+### React Testing Library
+
+### Playwright
+
+### MSW

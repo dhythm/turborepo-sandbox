@@ -1,0 +1,21 @@
+{
+  "name": "@repo/hello",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "vitest --run"
+  },
+  "exports": {
+    "./hello": {
+      "types": "./src/hello.ts",
+      "default": "./dist/hello.js"
+    }
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "typescript": "latest",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.8"
+  }
+}
