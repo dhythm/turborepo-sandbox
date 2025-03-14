@@ -231,11 +231,23 @@ npm install
 
 ## Linter / Formatter / type-checker
 
+### ESLint
+
+https://turbo.build/repo/docs/guides/tools/eslint
+
 ### Biome
+
+https://turbo.build/repo/docs/guides/tools/biome
+
+### TypeScript
+
+https://turbo.build/repo/docs/guides/tools/typescript
 
 ## Testing tools
 
 ### Jest
+
+https://turbo.build/repo/docs/guides/tools/jest
 
 ```sh
 npm install jest ts-jest @types/jest --workspace=@repo/math --save-dev
@@ -247,6 +259,8 @@ It worked with jest.config.js but not worked with jest.config.ts.
 https://github.com/vercel/turborepo/issues/4126
 
 ### Vitest
+
+https://turbo.build/repo/docs/guides/tools/vitest
 
 ```sh
 npm install vitest vite-tsconfig-paths --workspace=@repo/hello --save-dev
@@ -261,4 +275,12 @@ npm install @testing-library/react @testing-library/dom @types/react @types/reac
 
 ### Playwright
 
+### Playwright-ct
+
 ### MSW
+
+## Design
+
+### Storybook
+
+https://turbo.build/repo/docs/guides/tools/storybook
