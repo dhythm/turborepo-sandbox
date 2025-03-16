@@ -7,6 +7,10 @@ module.exports = {
     "^.+\\.tsx?$": ["ts-jest", { tsconfig: "./tsconfig.spec.json" }],
   },
   moduleFileExtensions: ["ts", "tsx", "js"],
-  testMatch: ["**/__tests__/**/*.(ts|tsx)", "**/?(*.)+(spec|test).(ts|tsx)"],
+  testMatch: [
+    "**/__tests__/**/*.(ts|tsx)",
+    "**/?(*.)+(spec|test).(ts|tsx)",
+    "!**/*.playwright-ct.(ts|tsx)",
+  ],
   setupFilesAfterEnv: [path.resolve(__dirname, "./jest.setup.js")],
 };
