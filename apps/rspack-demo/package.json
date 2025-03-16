@@ -16,11 +16,11 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@repo/typescript-config": "*",
     "@rspack/cli": "^1.2.8",
     "@rspack/core": "^1.2.8",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "ts-node": "^10.9.2"
   }
 }

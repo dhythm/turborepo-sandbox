@@ -230,45 +230,36 @@ npm install
 ### rspack
 
 ```sh
-sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/package.json`
-sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/tsconfig.json`
+mkdir apps/rspack-demo
+cd apps/rspack-demo
+pnpm init
+
+pnpm add react react-dom
+pnpm add -D @rspack/core @rspack/cli typescript ts-node @types/react @types/react-dom
+
+touch tsconfig.json
+touch rspack.config.mjs
+
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo src/index.tsx`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo public/index.html`
 ```
 
 ```json
-//package.json
-{
-  "name": "web",
-  "version": "0.1.0",
-  "type": "module",
-  "private": true,
+  // package.json
   "scripts": {
-    "dev": "rspack dev",
+    "dev": "rspack serve",
     "build": "rspack build"
+  },
+  "devDependencies": {
++   "@repo/typescript-config": "*",
+    "@rspack/cli": "^1.2.8",
+    "@rspack/core": "^1.2.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+-   "typescript": "^5.8.2",
+    "ts-node": "^10.9.2"
   }
-}
 ```
-
-```sh
-sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/public/index.html`
-sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/src/index.tsx`
-sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/src/App.tsx`
-```
-
-```sh
-npm install @rspack/core @rspack/cli --workspace=rspack-demo --save-dev
-
-cd apps/rspack-demo
-npx install-rspack --version latest
-
-◇  Still proceed?
-│  Yes
-│
-◇  Cannot infer which package manager to use, please select
-│  pnpm
-
-touch rspack.config.ts
-```
-
 
 ## Linter / Formatter / type-checker
 
