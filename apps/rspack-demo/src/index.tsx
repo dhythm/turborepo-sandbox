@@ -1,8 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { App } from "./App";
+import { createRoot } from "react-dom/client";
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-);
+const App = () => {
+  return <h1>Hello Rspack + React!</h1>;
+};
+
+const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(<App />);

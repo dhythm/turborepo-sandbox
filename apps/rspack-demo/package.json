@@ -1,23 +1,26 @@
 {
   "name": "rspack-demo",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "type": "module",
-  "private": true,
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "rspack dev",
+    "dev": "rspack serve",
     "build": "rspack build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@rspack/cli": "^1.2.8",
-    "@rspack/core": "^1.2.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "@rspack/core": "1.2.8",
-      "@rspack/cli": "1.2.8"
-    },
-    "peerDependencyRules": {
-      "allowAny": ["@rspack/*"]
-    }
+    "@rspack/core": "^1.2.8",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
