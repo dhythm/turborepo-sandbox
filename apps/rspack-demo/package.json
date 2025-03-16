@@ -1,0 +1,23 @@
+{
+  "name": "rspack-demo",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "rspack dev",
+    "build": "rspack build"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^1.2.8",
+    "@rspack/core": "^1.2.8"
+  },
+  "pnpm": {
+    "overrides": {
+      "@rspack/core": "1.2.8",
+      "@rspack/cli": "1.2.8"
+    },
+    "peerDependencyRules": {
+      "allowAny": ["@rspack/*"]
+    }
+  }
+}

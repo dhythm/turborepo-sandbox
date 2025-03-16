@@ -229,6 +229,47 @@ npm install
 
 ### rspack
 
+```sh
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/package.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/tsconfig.json`
+```
+
+```json
+//package.json
+{
+  "name": "web",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "rspack dev",
+    "build": "rspack build"
+  }
+}
+```
+
+```sh
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/public/index.html`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/src/index.tsx`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo apps/rspack-demo/src/App.tsx`
+```
+
+```sh
+npm install @rspack/core @rspack/cli --workspace=rspack-demo --save-dev
+
+cd apps/rspack-demo
+npx install-rspack --version latest
+
+◇  Still proceed?
+│  Yes
+│
+◇  Cannot infer which package manager to use, please select
+│  pnpm
+
+touch rspack.config.ts
+```
+
+
 ## Linter / Formatter / type-checker
 
 ### ESLint
