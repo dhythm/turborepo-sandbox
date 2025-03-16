@@ -1,0 +1,9 @@
+{
+  "name": "@repo/playwright-ct-utilities",
+  "peerDependencies": {
+    "playwright": "*"
+  },
+  "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.51.0"
+  }
+}
