@@ -1,5 +1,9 @@
 {
   "name": "@repo/playwright-ct-utilities",
+  "exports": {
+    ".": "./src/index.ts",
+    "./playwright-ct.config": "./playwright-ct.config.ts"
+  },
   "peerDependencies": {
     "playwright": "*"
   },

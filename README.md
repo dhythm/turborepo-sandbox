@@ -291,6 +291,11 @@ touch playwright.config.ts
 
 ### Playwright-ct
 
+```sh
+cd packages/ui
+npm init playwright@latest -- --ct
+```
+
 ### MSW
 
 ## Others

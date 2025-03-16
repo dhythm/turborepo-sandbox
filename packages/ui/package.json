@@ -9,11 +9,14 @@
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
-    "test": "jest"
+    "test": "jest",
+    "test:ct": "playwright test -c playwright-ct.config.ts"
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.51.0",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/playwright-ct-utilities": "*",
     "@storybook/react": "^8.6.4",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",

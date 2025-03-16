@@ -22,6 +22,10 @@
       "dependsOn": ["^test:e2e"],
       "passThroughEnv": ["PLAYWRIGHT_*"]
     },
+    "test:ct": {
+      "dependsOn": ["^test:ct"],
+      "passThroughEnv": ["PLAYWRIGHT_*"]
+    },
     "//#format-and-lint": {},
     "//#format-and-lint:fix": {
       "cache": false
