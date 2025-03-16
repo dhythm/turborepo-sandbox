@@ -280,6 +280,15 @@ npm install @testing-library/react @testing-library/dom @types/react @types/reac
 
 ### Playwright
 
+https://turbo.build/repo/docs/guides/tools/playwright
+
+```sh
+npm install @playwright/test --workspace=web --save-dev
+cd apps/web
+npx playwright install
+touch playwright.config.ts
+```
+
 ### Playwright-ct
 
 ### MSW
