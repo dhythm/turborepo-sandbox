@@ -1,7 +1,9 @@
 {
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,

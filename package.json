@@ -25,9 +25,6 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@4.0.0-rc.36",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "npm@9.5.0",
+  "workspaces": ["apps/*", "packages/*"]
 }
