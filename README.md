@@ -227,6 +227,39 @@ npm install
 
 ### webpack
 
+```sh
+mkdir -p apps/webpack-demo
+cd apps/webpack-demo
+yarn init -y
+
+yarn config set nodeLinker node-modules
+yarn set version 4.0.0-rc.36
+
+## Following command does NOT work well, so install via turborepo feature.
+# yarn add react react-dom
+# yarn add -D typescript @types/react @types/react-dom \
+  # webpack webpack-cli webpack-dev-server \
+  # ts-loader html-webpack-plugin \
+  # babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript \
+  # css-loader style-loader
+cd ../../
+npm install react react-dom --workspace=webpack-demo
+npm install typescript @types/react @types/react-dom \
+  webpack webpack-cli webpack-dev-server \
+  ts-loader html-webpack-plugin \
+  babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript \
+  css-loader style-loader \
+  --workspace=webpack-demo --save-dev
+cd apps/webpack-demo
+
+touch tsconfig.json
+touch webpack.config.mjs
+
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo src/index.tsx`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo src/App.tsx`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo public/index.html`
+```
+
 ### rspack
 
 ```sh
