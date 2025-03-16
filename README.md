@@ -296,6 +296,10 @@ cd packages/ui
 npm init playwright@latest -- --ct
 ```
 
+```sh
+npx turbo run test:ct -- --update-snapshots
+```
+
 ### MSW
 
 ## Others

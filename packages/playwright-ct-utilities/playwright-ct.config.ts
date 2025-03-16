@@ -19,6 +19,17 @@ export default defineConfig({
 
     /* Port to use for Playwright component endpoint. */
     ctPort: 3100,
+    ctViteConfig: {},
+    viewport: {
+      width: 1024,
+      height: 768,
+    },
+    screenshot: "only-on-failure",
+  },
+  expect: {
+    toMatchSnapshot: {
+      threshold: 0.2,
+    },
   },
   testMatch: ["**/*.playwright-ct.tsx"],
 
