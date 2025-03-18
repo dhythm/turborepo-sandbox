@@ -37,6 +37,6 @@ export default {
   devServer: {
     static: "./dist",
     hot: true,
-    port: 3000,
+    port: 3020,
   },
 };
