@@ -358,6 +358,18 @@ npx turbo run test:ct -- --update-snapshots
 
 ### MSW
 
+```sh
+mkdir -p packages/msw/src
+cd packages/msw
+npm init -y
+
+cd -
+npm install msw --workspace=@repo/msw --save-dev
+
+touch packages/msw/src/handler.ts
+touch packages/msw/src/browser.ts
+```
+
 ## Others
 
 ### Knip
