@@ -13,7 +13,7 @@
     "format-and-lint:fix": "npx @biomejs/biome check --write .",
     "check-types": "turbo run check-types",
     "knip": "knip",
-    "package-graph": "turbo run build --graph",
+    "package-graph": "turbo run build --graph graph.dot && dot -T svg graph.dot -o graph.svg; rm -f graph.dot",
     "dependency-graph": "depcruise packages --include-only \"^packages\" --output-type dot | dot -T svg > dependency-graph.svg"
   },
   "devDependencies": {
