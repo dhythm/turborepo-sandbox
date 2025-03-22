@@ -380,6 +380,20 @@ https://knip.dev/features/monorepos-and-workspaces
 npm init @knip/config
 ```
 
+### dependency graph
+
+```sh
+npm install --save-dev dependency-cruiser
+
+npx depcruise --init
+✔ This looks like mono repo. Is that correct? … yes
+✔ Mono repo it is! Where do your packages live? … packages
+✔ Do your packages use dependencies declared in the root of your repo? … no
+✔ Do you want to detect JSDoc imports as well (slower)? … no
+
+npx depcruise packages --include-only "^packages" --output-type dot | dot -T svg > dependency-graph.svg
+```
+
 ### Storybook
 
 https://turbo.build/repo/docs/guides/tools/storybook
