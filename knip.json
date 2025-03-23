@@ -1,0 +1,18 @@
+{
+  "$schema": "https://unpkg.com/knip@latest/knip.schema.json",
+  "workspaces": {
+    "apps/*": {
+      "entry": ["src/**/*.{ts,tsx,js,jsx}"]
+    },
+    "packages/*": {
+      "entry": ["src/**/*.{ts,tsx,js,jsx}"]
+    }
+  },
+  "ignore": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/.next/**",
+    "**/build/**",
+    "**/generators/config.ts"
+  ]
+}
