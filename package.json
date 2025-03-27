@@ -31,5 +31,5 @@
     "node": ">=18"
   },
   "packageManager": "npm@9.5.0",
-  "workspaces": ["apps/*", "packages/*"]
+  "workspaces": ["apps/*", "packages/*", "packages/nested/*"]
 }

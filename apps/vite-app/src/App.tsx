@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import { Card } from "@repo/ui/card";
+import { hello as helloEn } from "@repo/nested-en/hello";
+import { hello as helloJa } from "@repo/nested-ja/hello";
 import './App.css'
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <p>{helloEn}</p>
+      <p>{helloJa}</p>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

@@ -407,3 +407,28 @@ turbo run --affected
 ### remote cache
 
 https://turbo.build/repo/docs/core-concepts/remote-caching
+
+```sh
+npx turbo login
+npx turbo link
+```
+
+### Nested packages
+
+https://github.com/baptisteArno/typebot.io/blob/main/packages/blocks/base/package.json
+
+```sh
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/nested/ja/package.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/nested/en/package.json`
+
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/nested/ja/tsconfig.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/nested/en/tsconfig.json`
+
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/nested/ja/src/hello.ts`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/nested/en/src/hello.ts`
+```
+
+```json
+  // package.json
+  "workspaces": ["apps/*", "packages/*", "packages/nested/*"]
+```

@@ -1,0 +1,1 @@
+export const hello = 'こんにちは、世界！';
