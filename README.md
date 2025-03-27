@@ -397,3 +397,13 @@ npx depcruise packages --include-only "^packages" --output-type dot | dot -T svg
 ### Storybook
 
 https://turbo.build/repo/docs/guides/tools/storybook
+
+### affected
+
+```sh
+turbo run --affected
+```
+
+### remote cache
+
+https://turbo.build/repo/docs/core-concepts/remote-caching
