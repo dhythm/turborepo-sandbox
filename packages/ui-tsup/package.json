@@ -4,13 +4,13 @@
   "private": true,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
+      "types": "./dist/index.d.mts",
+      "require": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts --dts",
+    "build": "tsup src/index.ts --dts --format esm",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen rc-tsup",
     "check-types": "tsc --noEmit"
