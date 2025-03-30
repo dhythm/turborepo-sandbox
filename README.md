@@ -443,4 +443,18 @@ npm install
 
 ```sh
 npm install tsup --workspace=@repo/ui-tsup --save-dev
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/ui-tsup/turbo/generators/templates/component.hbs`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/ui-tsup/turbo/generators/config.ts`
+```
+
+```sh
+cd packages/ui-tsup
+
+npm run generate:component
+? What is the name of the component? Button
+>>> Changes made:
+  • /src/button.tsx (add)
+  • /package.json (append)
+
+cd -
 ```
