@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { Card } from "@repo/ui/card";
 import { hello as helloEn } from "@repo/nested-en/hello";
 import { hello as helloJa } from "@repo/nested-ja/hello";
+import { Button } from "@repo/ui-tsup";
 import './App.css'
 
 function App() {
@@ -23,9 +24,9 @@ function App() {
       <p>{helloEn}</p>
       <p>{helloJa}</p>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
