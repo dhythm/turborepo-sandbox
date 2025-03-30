@@ -31,5 +31,9 @@
     "node": ">=18"
   },
   "packageManager": "npm@9.5.0",
-  "workspaces": ["apps/*", "packages/*", "packages/*/*"]
+  "workspaces": ["apps/*", "packages/*", "packages/*/*"],
+  "overrides": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
 }

@@ -432,3 +432,15 @@ sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/nested/en/src/he
   // package.json
   "workspaces": ["apps/*", "packages/*", "packages/nested/*"]
 ```
+
+### tsup
+
+```sh
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/ui-tsup/package.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/ui-tsup/tsconfig.json`
+npm install
+```
+
+```sh
+npm install tsup --workspace=@repo/ui-tsup --save-dev
+```
