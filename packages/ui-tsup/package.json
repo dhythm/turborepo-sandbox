@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup src/index.ts --dts",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen rc-tsup",
     "check-types": "tsc --noEmit"
