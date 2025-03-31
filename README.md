@@ -458,3 +458,13 @@ npm run generate:component
 
 cd -
 ```
+
+### Managing dependencies
+
+- [syncpack](https://github.com/JamieMason/syncpack)
+- [manypkg](https://github.com/Thinkmill/manypkg)
+- [sherif](https://github.com/QuiiBz/sherif)
+
+```sh
+npm install typescript@latest --workspaces
+```
