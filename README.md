@@ -468,3 +468,11 @@ cd -
 ```sh
 npm install typescript@latest --workspaces
 ```
+
+### patch-package
+
+Install to all via,
+
+```sh
+npm install patch-package --workspaces --save-dev
+```
