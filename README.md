@@ -476,3 +476,7 @@ Install to all via,
 ```sh
 npm install patch-package --workspaces --save-dev
 ```
+
+```sh
+npx patch-package PACKAGE
+```
