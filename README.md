@@ -480,3 +480,6 @@ npm install patch-package --workspaces --save-dev
 ```sh
 npx patch-package PACKAGE
 ```
+
+`patch-package` works each.
+It means that all apps/packages should have `post-install` and patches in each.
