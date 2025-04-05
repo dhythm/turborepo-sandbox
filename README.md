@@ -480,3 +480,11 @@ npm install patch-package --workspaces --save-dev
 ```sh
 npx patch-package PACKAGE
 ```
+
+### Syncpack
+
+Install syncpack:
+
+```sh
+npm install -D syncpack
+```
