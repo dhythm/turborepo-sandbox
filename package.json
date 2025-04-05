@@ -11,6 +11,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "format-and-lint": "npx @biomejs/biome check .",
     "format-and-lint:fix": "npx @biomejs/biome check --write .",
+    "format:deps": "syncpack format",
+    "check:deps": "syncpack list-mismatches",
     "check-types": "turbo run check-types",
     "knip": "knip",
     "knip:check": "knip --include files,exports,nsExports,types,nsTypes,enumMembers,classMembers,duplicates",
@@ -34,13 +36,12 @@
     "node": ">=18"
   },
   "packageManager": "npm@9.5.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "packages/*/*"
-  ],
+  "workspaces": ["apps/*", "packages/*", "packages/*/*"],
   "overrides": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "syncpack": {
+    "source": ["package.json", "packages/*/package.json"]
   }
 }
