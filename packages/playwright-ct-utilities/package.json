@@ -1,13 +1,13 @@
 {
   "name": "@repo/playwright-ct-utilities",
+  "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.51.0"
+  },
   "exports": {
     ".": "./src/index.ts",
     "./playwright-ct.config": "./playwright-ct.config.ts"
   },
   "peerDependencies": {
     "playwright": "*"
-  },
-  "devDependencies": {
-    "@playwright/experimental-ct-react": "^1.51.0"
   }
 }

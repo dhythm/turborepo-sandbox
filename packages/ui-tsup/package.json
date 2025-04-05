@@ -1,19 +1,9 @@
 {
   "name": "@repo/ui-tsup",
   "version": "0.0.0",
-  "private": true,
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.mts",
-      "require": "./dist/index.mjs",
-      "default": "./dist/index.mjs"
-    }
-  },
-  "scripts": {
-    "build": "tsup src/index.ts --dts --format esm",
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen rc-tsup",
-    "check-types": "tsc --noEmit"
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
@@ -26,8 +16,18 @@
     "tsup": "^8.4.0",
     "typescript": "5.8.2"
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "require": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "private": true,
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm",
+    "check-types": "tsc --noEmit",
+    "generate:component": "turbo gen rc-tsup",
+    "lint": "eslint . --max-warnings 0"
   }
 }

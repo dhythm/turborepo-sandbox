@@ -1,10 +1,11 @@
 {
   "name": "@repo/hello",
-  "type": "module",
-  "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "test": "vitest --run"
+  "devDependencies": {
+    "@repo/msw": "*",
+    "@repo/typescript-config": "*",
+    "typescript": "latest",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.8"
   },
   "exports": {
     "./hello": {
@@ -12,11 +13,10 @@
       "default": "./dist/hello.js"
     }
   },
-  "devDependencies": {
-    "@repo/typescript-config": "*",
-    "@repo/msw": "*",
-    "typescript": "latest",
-    "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.8"
-  }
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest --run"
+  },
+  "type": "module"
 }

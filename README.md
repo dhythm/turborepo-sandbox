@@ -488,3 +488,8 @@ Install syncpack:
 ```sh
 npm install -D syncpack
 ```
+
+```sh
+npm run check:deps
+npm run format:deps
+```

@@ -1,25 +1,5 @@
 {
   "name": "turborepo-sandbox",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "test": "turbo run test",
-    "test:e2e": "turbo run test:e2e",
-    "test:ct": "turbo run test:ct",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "format-and-lint": "npx @biomejs/biome check .",
-    "format-and-lint:fix": "npx @biomejs/biome check --write .",
-    "format:deps": "syncpack format",
-    "check:deps": "syncpack list-mismatches",
-    "check-types": "turbo run check-types",
-    "knip": "knip",
-    "knip:check": "knip --include files,exports,nsExports,types,nsTypes,enumMembers,classMembers,duplicates",
-    "package-graph": "turbo run build --graph graph.dot && dot -T svg graph.dot -o graph.svg; rm -f graph.dot",
-    "dependency-graph": "depcruise packages --include-only \"^packages\" --output-type dot | dot -T svg > dependency-graph.svg",
-    "postinstall": "patch-package"
-  },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/node": "^22.13.10",
@@ -35,13 +15,40 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "npm@9.5.0",
-  "workspaces": ["apps/*", "packages/*", "packages/*/*"],
   "overrides": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
+  "packageManager": "npm@9.5.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "check:deps": "syncpack list-mismatches",
+    "dependency-graph": "depcruise packages --include-only \"^packages\" --output-type dot | dot -T svg > dependency-graph.svg",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format-and-lint": "npx @biomejs/biome check .",
+    "format-and-lint:fix": "npx @biomejs/biome check --write .",
+    "format:deps": "syncpack format",
+    "knip": "knip",
+    "knip:check": "knip --include files,exports,nsExports,types,nsTypes,enumMembers,classMembers,duplicates",
+    "lint": "turbo run lint",
+    "package-graph": "turbo run build --graph graph.dot && dot -T svg graph.dot -o graph.svg; rm -f graph.dot",
+    "postinstall": "patch-package",
+    "test": "turbo run test",
+    "test:ct": "turbo run test:ct",
+    "test:e2e": "turbo run test:e2e"
+  },
   "syncpack": {
-    "source": ["package.json", "packages/*/package.json"]
-  }
+    "source": [
+      "package.json",
+      "packages/*/package.json"
+    ]
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/*/*"
+  ]
 }
