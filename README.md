@@ -483,3 +483,16 @@ npx patch-package PACKAGE
 
 `patch-package` works each.
 It means that all apps/packages should have `post-install` and patches in each.
+
+### Syncpack
+
+Install syncpack:
+
+```sh
+npm install -D syncpack
+```
+
+```sh
+npm run check:deps
+npm run format:deps
+```
