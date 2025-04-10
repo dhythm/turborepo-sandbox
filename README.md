@@ -505,4 +505,26 @@ sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/mui/tsconfig.jso
 sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/mui/src/index.ts`
 
 npm install @mui/material@5.8.7 @mui/styled-engine @mui/styled-engine-sc@^5.8.0 styled-components@5.3.6 --workspace=@repo/ui
+npm install react react-dom --workspace=@repo/mui
+```
+
+```jsonc
+  // package.json
+  "overrides": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
+  },
+```
+
+```jsonc
+  // packages/mui/package.json
+  "dependencies": {
+    "@mui/material": "^5.8.7",
+    "@mui/styled-engine": "^7.0.2",
+    "@mui/styled-engine-sc": "^5.14.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^5.3.6"
+  },
 ```
