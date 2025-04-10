@@ -6,10 +6,8 @@
     "quickfix.biome": "always",
     "source.organizeImports.biome": "always"
   },
-  "cSpell.words": [
-    "Manypkg",
-    "rspack",
-    "syncpack",
-    "Turborepo"
-  ]
+  "cSpell.words": ["Manypkg", "rspack", "syncpack", "Turborepo"],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
