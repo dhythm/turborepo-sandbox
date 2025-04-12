@@ -46,5 +46,20 @@
       "cache": false,
       "persistent": true
     }
+  },
+  "boundaries": {
+    "tags": {
+      "public": {
+        "dependencies": {
+          "deny": ["internal"],
+          "allow": ["public"]
+        }
+      },
+      "private": {
+        "dependencies": {
+          "deny": ["public", "@repo/internal"]
+        }
+      }
+    }
   }
 }

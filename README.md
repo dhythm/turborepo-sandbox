@@ -528,3 +528,7 @@ npm install react react-dom --workspace=@repo/mui
     "styled-components": "^5.3.6"
   },
 ```
+
+### Boundaries
+
+https://turbo.build/docs/reference/boundaries

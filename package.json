@@ -39,7 +39,8 @@
     "postinstall": "patch-package",
     "test": "turbo run test",
     "test:ct": "turbo run test:ct",
-    "test:e2e": "turbo run test:e2e"
+    "test:e2e": "turbo run test:e2e",
+    "boundaries": "turbo boundaries"
   },
   "syncpack": {
     "source": ["package.json", "packages/*/package.json"]
