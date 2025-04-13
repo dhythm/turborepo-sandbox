@@ -44,14 +44,7 @@
     "boundaries": "turbo boundaries"
   },
   "syncpack": {
-    "source": [
-      "package.json",
-      "packages/*/package.json"
-    ]
+    "source": ["package.json", "packages/*/package.json"]
   },
-  "workspaces": [
-    "apps/*",
-    "packages/*",
-    "packages/*/*"
-  ]
+  "workspaces": ["apps/*", "packages/*", "packages/*/*"]
 }
