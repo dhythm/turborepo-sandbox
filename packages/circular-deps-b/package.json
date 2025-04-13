@@ -1,0 +1,14 @@
+{
+  "name": "@repo/circular-deps-b",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@repo/circular-deps-a": "*"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*"
+  },
+  "scripts": {
+    "check:cycles": "madge --circular src || (echo '❌ 循環参照が検出されました' && exit 1)"
+  }
+}

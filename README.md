@@ -532,3 +532,12 @@ npm install react react-dom --workspace=@repo/mui
 ### Boundaries
 
 https://turbo.build/docs/reference/boundaries
+
+### Circular dependencies
+
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-a/package.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-a/tsconfig.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-a/src/index.ts`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-b/package.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-b/tsconfig.json`
+sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-b/src/index.ts`

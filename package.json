@@ -6,6 +6,7 @@
     "dependency-cruiser": "^16.10.0",
     "dot": "^1.1.3",
     "knip": "^5.46.0",
+    "madge": "^8.0.0",
     "patch-package": "^8.0.0",
     "prettier": "^3.5.3",
     "syncpack": "^13.0.3",
@@ -43,7 +44,14 @@
     "boundaries": "turbo boundaries"
   },
   "syncpack": {
-    "source": ["package.json", "packages/*/package.json"]
+    "source": [
+      "package.json",
+      "packages/*/package.json"
+    ]
   },
-  "workspaces": ["apps/*", "packages/*", "packages/*/*"]
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/*/*"
+  ]
 }
