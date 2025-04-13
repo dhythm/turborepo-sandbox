@@ -568,3 +568,47 @@ sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-a/
 sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-b/package.json`
 sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-b/tsconfig.json`
 sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-b/src/index.ts`
+
+```jsonc
+  // packages/circular-deps-a/package.json
+  "dependencies": {
+    "@repo/circular-deps-b": "*"
+  },
+
+  // packages/circular-deps-b/package.json
+  "dependencies": {
+    "@repo/circular-deps-a": "*"
+  },
+```
+
+```ts
+// packages/src/index.ts
+import { b } from "@repo/circular-deps-b";
+
+export const a = "a";
+console.log(b);
+
+// packages/src/index.ts
+import { a } from "@repo/circular-deps-a";
+
+export const b = "b";
+console.log(a);
+```
+
+Exec `npm run build` and then,
+
+```
+  × Invalid package dependency graph:
+  ╰─▶ Cyclic dependency detected:
+        @repo/circular-deps-a, @repo/circular-deps-b
+      
+      The cycle can be broken by removing any of these sets of dependencies:
+        { @repo/circular-deps-b -> @repo/circular-deps-a }
+        { @repo/circular-deps-a -> @repo/circular-deps-b }
+```
+
+Turborepo detects the cyclic dependency between packages.
+
+On the other hand, Turborepo cannot detect the circular dependencies inside a single package.
+To resolve this issue, recommended way is installing `madge` or `dependency-cruiser`.
+
