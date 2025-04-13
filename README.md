@@ -533,6 +533,33 @@ npm install react react-dom --workspace=@repo/mui
 
 https://turbo.build/docs/reference/boundaries
 
+Create `packages/xxx/turbo.json` and add tags like the below:
+
+```jsonc
+// package/xxx/turbo.json
+{
+  "tags": ["internal"]
+}
+
+```
+
+Run `turbo boundaries` then,
+
+```
+  × Package `@repo/typescript-config` found without any tag listed in allowlist for `@repo/public`
+  help: `@repo/typescript-config` doesn't any tags defined in its `turbo.json` file
+  ╰─▶   × consider adding one of the following tags listed here
+          ╭─[turbo.json:58:20]
+       57 │           "deny": ["internal"],
+       58 │           "allow": ["public"]
+          ·                    ──────────
+       59 │         }
+          ╰────
+```
+
+However, `packages/xxx/turbo.json` invokes build error at the moment.
+And now, we haven't found a way to co-exist both `turbo boundaries` and `turbo build` with `packages/xxx/turbo.json`.
+
 ### Circular dependencies
 
 sh -c 'mkdir -p "$(dirname "$0")" && touch "$0"' `echo packages/circular-deps-a/package.json`
