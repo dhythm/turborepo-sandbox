@@ -9,6 +9,6 @@
     "@repo/typescript-config": "*"
   },
   "scripts": {
-    "check:cycles": "madge --circular src || (echo '❌ 循環参照が検出されました' && exit 1)"
+    "check:cycles": "madge --circular --extensions js,jsx,ts,tsx src || (echo '❌ 循環参照が検出されました' && exit 1)"
   }
 }

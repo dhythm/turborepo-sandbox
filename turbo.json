@@ -42,7 +42,7 @@
       "dependsOn": ["^check-types"]
     },
     "check:cycles": {
-      "outputs": []
+      "dependsOn": ["^check:cycles"]
     },
     "dev": {
       "dependsOn": ["@repo/ui-tsup#build"],
