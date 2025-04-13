@@ -3,7 +3,7 @@
   "ui": "tui",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "^check:cycles"],
       "inputs": ["$TURBO_DEFAULT$", ".env*", "!**/*.stories.{tsx,jsx,mdx}"],
       "outputs": [
         ".next/**",
@@ -40,6 +40,9 @@
     },
     "check-types": {
       "dependsOn": ["^check-types"]
+    },
+    "check:cycles": {
+      "outputs": []
     },
     "dev": {
       "dependsOn": ["@repo/ui-tsup#build"],
