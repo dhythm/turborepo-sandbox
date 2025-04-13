@@ -2,9 +2,7 @@
   "name": "@repo/circular-deps-b",
   "version": "0.0.1",
   "main": "src/index.ts",
-  "dependencies": {
-    "@repo/circular-deps-a": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@repo/typescript-config": "*"
   },

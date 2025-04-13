@@ -11,5 +11,8 @@
     "build": "tsc",
     "dev": "tsc --watch"
   },
-  "type": "module"
+  "type": "module",
+  "turbo": {
+    "tags": ["internal"]
+  }
 }
